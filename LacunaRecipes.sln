@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LacunaRecipes", "LacunaRecipes\LacunaRecipes.csproj", "{B7BB0FB8-9447-4023-8ABC-72DA39C28F3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7BB0FB8-9447-4023-8ABC-72DA39C28F3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7BB0FB8-9447-4023-8ABC-72DA39C28F3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7BB0FB8-9447-4023-8ABC-72DA39C28F3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7BB0FB8-9447-4023-8ABC-72DA39C28F3C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5D5E96F5-9F19-4828-A38A-A10FB5C153DD}
+	EndGlobalSection
+EndGlobal
