@@ -16,6 +16,6 @@ namespace LacunaRecipes.Entities {
 		public Ingredient Ingredient { get; set; }
 
 		[Required]
-		public string QuantityInGrams { get; set; }
+		public string Quantity { get; set; }
 	}
 }

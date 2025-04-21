@@ -1,6 +1,5 @@
-﻿namespace LacunaRecipes.Controllers
-{
-	public class IngredientAndRecipesController
-	{
-	}
+﻿namespace LacunaRecipes.Controllers;
+
+public class IngredientAndRecipesController {
+
 }

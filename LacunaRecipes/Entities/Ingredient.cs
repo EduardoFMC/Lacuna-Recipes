@@ -6,5 +6,8 @@ namespace LacunaRecipes.Entities {
 
 		[Required]
 		public string Name { get; set; } = string.Empty;
+
+		[Required]
+		public string Unit { get; set; } = string.Empty;
 	}
 }

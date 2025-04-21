@@ -1,6 +1,4 @@
-﻿namespace LacunaRecipes.Business
-{
-	public class IngredientAndRecipeService
-	{
-	}
+﻿namespace LacunaRecipes.Business;
+
+public class IngredientAndRecipeService {
 }
