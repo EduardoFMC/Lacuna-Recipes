@@ -1,1 +1,223 @@
-[]
+[
+  {
+    "ContainingType": "LacunaRecipes.Controllers.IngredientAndRecipesController",
+    "Method": "GetAll",
+    "RelativePath": "api/IngredientAndRecipes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LacunaRecipes.Controllers.IngredientAndRecipesController",
+    "Method": "Add",
+    "RelativePath": "api/IngredientAndRecipes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "recipeAndIngredient",
+        "Type": "LacunaRecipes.Entities.RecipeAndIngredient",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LacunaRecipes.Controllers.IngredientAndRecipesController",
+    "Method": "GetById",
+    "RelativePath": "api/IngredientAndRecipes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LacunaRecipes.Controllers.IngredientAndRecipesController",
+    "Method": "Update",
+    "RelativePath": "api/IngredientAndRecipes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "recipeAndIngredient",
+        "Type": "LacunaRecipes.Entities.RecipeAndIngredient",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LacunaRecipes.Controllers.IngredientsController",
+    "Method": "GetAllIngredients",
+    "RelativePath": "api/ingredients",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LacunaRecipes.Controllers.IngredientsController",
+    "Method": "AddIngredient",
+    "RelativePath": "api/ingredients",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ingredient",
+        "Type": "LacunaRecipes.Entities.Ingredient",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LacunaRecipes.Controllers.IngredientsController",
+    "Method": "GetIngredientById",
+    "RelativePath": "api/ingredients/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LacunaRecipes.Controllers.IngredientsController",
+    "Method": "UpdateIngredient",
+    "RelativePath": "api/ingredients/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "ingredient",
+        "Type": "LacunaRecipes.Entities.Ingredient",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LacunaRecipes.Controllers.IngredientsController",
+    "Method": "DeleteIngredient",
+    "RelativePath": "api/ingredients/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LacunaRecipes.Controllers.RecipesController",
+    "Method": "GetAllRecipes",
+    "RelativePath": "api/recipes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LacunaRecipes.Controllers.RecipesController",
+    "Method": "AddRecipe",
+    "RelativePath": "api/recipes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "recipe",
+        "Type": "LacunaRecipes.Entities.Recipe",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LacunaRecipes.Controllers.RecipesController",
+    "Method": "GetRecipeById",
+    "RelativePath": "api/recipes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LacunaRecipes.Controllers.RecipesController",
+    "Method": "UpdateRecipe",
+    "RelativePath": "api/recipes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "recipe",
+        "Type": "LacunaRecipes.Entities.Recipe",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LacunaRecipes.Controllers.RecipesController",
+    "Method": "DeleteRecipe",
+    "RelativePath": "api/recipes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -7,15 +7,18 @@ public class IngredientService {
 	private readonly IIngredientRepository ingredientRepository;
 	private readonly IRecipeRepository recipeRepository;
 	private readonly IRecipeAndIngredientRepository recipeAndIngredientRepository;
+	private readonly IPersistenceRepository persistenceRepository;
 
 	public IngredientService(
 		IIngredientRepository ingredientRepository,
 		IRecipeRepository recipeRepository,
-		IRecipeAndIngredientRepository recipeAndIngredientRepository
+		IRecipeAndIngredientRepository recipeAndIngredientRepository,
+		IPersistenceRepository persistenceRepository
 		) {
 		this.ingredientRepository = ingredientRepository;
 		this.recipeRepository = recipeRepository;
 		this.recipeAndIngredientRepository = recipeAndIngredientRepository;
+		this.persistenceRepository = persistenceRepository;
 	}
 
 	public async Task<List<Ingredient>> GetAllIngredientsAsync() {
@@ -27,14 +30,20 @@ public class IngredientService {
 	}
 
 	public async Task<Ingredient> AddIngredientAsync(Ingredient ingredient) {
-		return await ingredientRepository.AddAsync(ingredient);
+		return await persistenceRepository.TransactionAsync(
+			() => ingredientRepository.AddAsync(ingredient)
+		);
 	}
 
 	public async Task<Ingredient> UpdateIngredientAsync(Ingredient ingredient) {
-		return await ingredientRepository.UpdateAsync(ingredient);
+		return await persistenceRepository.TransactionAsync(
+			() => ingredientRepository.UpdateAsync(ingredient)
+		);
 	}
 
 	public async Task DeleteIngredientAsync(Guid id) {
-		await ingredientRepository.DeleteAsync(id);
+		await persistenceRepository.TransactionAsync(
+			() => ingredientRepository.DeleteAsync(id)
+		);
 	}
 }
