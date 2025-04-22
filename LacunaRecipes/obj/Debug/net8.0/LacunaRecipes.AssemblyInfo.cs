@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LacunaRecipes")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c82a71b0e0bbd4caedf5f559c1a566bd319b15a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ab6095615c2dc586321eb98f3cc4be91b29fea5")]
 [assembly: System.Reflection.AssemblyProductAttribute("LacunaRecipes")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LacunaRecipes")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -3,13 +3,13 @@ using LacunaRecipes.Entities;
 
 namespace LacunaRecipes.Business;
 
-public class IngredientAndRecipeService {
+public class RecipeAndIngredientService {
 	private readonly IIngredientRepository ingredientRepository;
 	private readonly IRecipeRepository recipeRepository;
 	private readonly IRecipeAndIngredientRepository recipeAndIngredientRepository;
 	private readonly IPersistenceRepository persistenceRepository;
 
-	public IngredientAndRecipeService(
+	public RecipeAndIngredientService(
 		IIngredientRepository ingredientRepository,
 		IRecipeRepository recipeRepository,
 		IRecipeAndIngredientRepository recipeAndIngredientRepository,

@@ -3,6 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LacunaRecipes.Entities {
 	public class RecipeAndIngredient {
+		public Guid Id { get; set; } = Guid.NewGuid();
+
 		[Key]
 		[Column(Order = 0)]
 		[ForeignKey("Recipe")]

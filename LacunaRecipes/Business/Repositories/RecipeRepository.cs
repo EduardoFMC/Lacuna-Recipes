@@ -9,7 +9,7 @@ public class RecipeRepository : IRecipeRepository {
 
 	public RecipeRepository(
 		AppDbContext dbContext,
-		PersistenceRepository persistenceRepository
+		IPersistenceRepository persistenceRepository
 	) {
 		this.dbContext = dbContext;
 		this.persistenceRepository = persistenceRepository;
