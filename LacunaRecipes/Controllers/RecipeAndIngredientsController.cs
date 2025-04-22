@@ -49,4 +49,14 @@ public class RecipeAndIngredientsController : ControllerBase {
 		var result = await recipeAndIngredientService.UpdateAsync(recipeAndIngredient);
 		return Ok(result);
 	}
+
+	[HttpDelete("{id:guid}")]
+	public async Task<IActionResult> Delete(Guid id) {
+		var existing = await recipeAndIngredientService.GetByIdAsync(id);
+		if (existing == null) {
+			return NotFound();
+		}
+		await recipeAndIngredientService.DelectAsync(id);
+		return NoContent();
+	}
 }

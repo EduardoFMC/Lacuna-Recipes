@@ -41,8 +41,18 @@ public class RecipeService {
 		});
 	}
 
-	public async Task DeleteRecipeAsync(Guid id) {
+	public async Task DeleteRecipeByIdAsync(Guid id) {
+		var recipe = await recipeRepository.GetByIdAsync(id);
+		if (recipe == null) {
+			throw new KeyNotFoundException($"Recipe with ID {id} not found.");
+		}
+
+		var recipeAndIngredients = await recipeRepository.GetRecipeIngredientsByIdAsync(id);
+
 		await persistenceRepository.TransactionAsync(async () => {
+			foreach (var recipeAndIngredient in recipeAndIngredients) {
+				await recipeAndIngredientRepository.DeleteAsync(recipeAndIngredient.Id);
+			}
 			await recipeRepository.DeleteAsync(id);
 		});
 	}

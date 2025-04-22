@@ -55,7 +55,7 @@ public class RecipesController : ControllerBase {
 		if (recipe == null) {
 			return NotFound();
 		}
-		await recipeService.DeleteRecipeAsync(id);
+		await recipeService.DeleteRecipeByIdAsync(id);
 		return NoContent();
 	}
 }

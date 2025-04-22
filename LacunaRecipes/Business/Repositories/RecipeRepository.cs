@@ -35,6 +35,12 @@ public class RecipeRepository : IRecipeRepository {
 		return recipe;
 	}
 
+	public async Task<List<RecipeAndIngredient>> GetRecipeIngredientsByIdAsync(Guid id) {
+		return await dbContext.RecipeAndIngredients
+			.Where(ri => ri.RecipeId == id)
+			.ToListAsync();
+	}
+
 	public async Task DeleteAsync(Guid id) {
 		var rowsAffected = await dbContext.Recipes
 			.Where(recipe => recipe.Id == id)

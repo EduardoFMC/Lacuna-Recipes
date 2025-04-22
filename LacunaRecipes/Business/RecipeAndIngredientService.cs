@@ -40,4 +40,10 @@ public class RecipeAndIngredientService {
 			() => recipeAndIngredientRepository.UpdateAsync(recipeAndIngredient)
 		);
 	}
+
+	public async Task DelectAsync(Guid id) {
+		await persistenceRepository.TransactionAsync(
+			() => recipeAndIngredientRepository.DeleteAsync(id)
+		);
+	}
 }

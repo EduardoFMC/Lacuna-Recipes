@@ -34,5 +34,13 @@ public class RecipeAndIngredientRepository : IRecipeAndIngredientRepository {
 		await persistenceRepository.SaveChangesAsync();
 		return recipeAndIngredient;
 	}
+
+	public async Task DeleteAsync(Guid id) {
+		var entity = await dbContext.RecipeAndIngredients.FindAsync(id);
+		if (entity != null) {
+			dbContext.RecipeAndIngredients.Remove(entity);
+			await persistenceRepository.SaveChangesAsync();
+		}
+	}
 }
 
