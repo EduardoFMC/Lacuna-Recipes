@@ -95,23 +95,28 @@ Use the following SQL script to insert initial data:
 ```sql
 -- Ingredients
 INSERT INTO Ingredients (Id, Name, Unit) VALUES
-  ('a1111111-1111-1111-1111-111111111111', 'Flour', 'grams'),
-  ('b2222222-2222-2222-2222-222222222222', 'Sugar', 'grams'),
-  ('c3333333-3333-3333-3333-333333333333', 'Eggs', 'pieces');
+('11111111-1111-1111-1111-111111111111', 'Flour', 'grams'),
+('22222222-2222-2222-2222-222222222222', 'Sugar', 'grams'),
+('33333333-3333-3333-3333-333333333333', 'Eggs', 'units'),
+('44444444-4444-4444-4444-444444444444', 'Milk', 'ml'),
+('55555555-5555-5555-5555-555555555555', 'Butter', 'grams');
 
 -- Recipes
 INSERT INTO Recipes (Id, Title, PreparationMethod) VALUES
-  ('d4444444-4444-4444-4444-444444444444', 'Pancakes', 'Mix ingredients and fry.'),
-  ('e5555555-5555-5555-5555-555555555555', 'Chocolate Cake', 'Combine batter and bake at 180°C.');
+('aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa', 'Pancakes', 'Mix all ingredients and cook on a skillet.'),
+('bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb', 'Cake', 'Mix, bake at 180°C for 40 minutes.');
 
--- Recipe-Ingredient Links
-INSERT INTO RecipeAndIngredients (RecipeId, IngredientId, Quantity) VALUES
-  ('d4444444-4444-4444-4444-444444444444', 'a1111111-1111-1111-1111-111111111111', '200', '00000000-0000-0000-0000-000000000001'),
-  ('d4444444-4444-4444-4444-444444444444', 'b2222222-2222-2222-2222-222222222222', '50', '00000000-0000-0000-0000-000000000002'),
-  ('d4444444-4444-4444-4444-444444444444', 'c3333333-3333-3333-3333-333333333333', '2', '00000000-0000-0000-0000-000000000003'),
-  ('e5555555-5555-5555-5555-555555555555', 'a1111111-1111-1111-1111-111111111111', '250', '00000000-0000-0000-0000-000000000004'),
-  ('e5555555-5555-5555-5555-555555555555', 'b2222222-2222-2222-2222-222222222222', '100', '00000000-0000-0000-0000-000000000005'),
-  ('e5555555-5555-5555-5555-555555555555', 'c3333333-3333-3333-3333-333333333333', '3', '00000000-0000-0000-0000-000000000006');
+-- RecipeAndIngredients
+INSERT INTO RecipeAndIngredients (Id, RecipeId, IngredientId, Quantity) VALUES
+('a1a1a1a1-a1a1-a1a1-a1a1-a1a1a1a1a1a1', 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa', '11111111-1111-1111-1111-111111111111', '200'),
+('a2a2a2a2-a2a2-a2a2-a2a2-a2a2a2a2a2a2', 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa', '22222222-2222-2222-2222-222222222222', '50'),
+('a3a3a3a3-a3a3-a3a3-a3a3-a3a3a3a3a3a3', 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa', '33333333-3333-3333-3333-333333333333', '2'),
+('a4a4a4a4-a4a4-a4a4-a4a4-a4a4a4a4a4a4', 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa', '44444444-4444-4444-4444-444444444444', '250'),
+
+('b1b1b1b1-b1b1-b1b1-b1b1-b1b1b1b1b1b1', 'bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb', '11111111-1111-1111-1111-111111111111', '300'),
+('b2b2b2b2-b2b2-b2b2-b2b2-b2b2b2b2b2b2', 'bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb', '22222222-2222-2222-2222-222222222222', '150'),
+('b3b3b3b3-b3b3-b3b3-b3b3-b3b3b3b3b3b3', 'bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb', '33333333-3333-3333-3333-333333333333', '3'),
+('b4b4b4b4-b4b4-b4b4-b4b4-b4b4b4b4b4b4', 'bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb', '55555555-5555-5555-5555-555555555555', '100');
 ```
 ## License
 No License
