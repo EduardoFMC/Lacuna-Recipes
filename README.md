@@ -82,6 +82,7 @@ Here you can explore and test all available endpoints, check you localhost.
 
 | Property       | Type   | Description                                             |
 |----------------|--------|---------------------------------------------------------|
+| `Id`                 | GUID   | Primary key                                       |
 | `RecipeId`     | GUID   | FK to Recipe                                            |
 | `IngredientId` | GUID   | FK to Ingredient                                        |
 | `Quantity`     | string | Quantity for this ingredient in the recipe (required)   |
