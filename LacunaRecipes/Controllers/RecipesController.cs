@@ -1,5 +1,6 @@
 ﻿using LacunaRecipes.Business;
 using LacunaRecipes.Entities;
+using LacunaRecipes.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LacunaRecipes.Controllers;
@@ -14,17 +15,15 @@ public class RecipesController : ControllerBase {
 	}
 
 	[HttpGet]
-	public async Task<IActionResult> GetAllRecipes() {
+	public async Task<ActionResult<List<RecipeDto>>> GetAllRecipes() {
 		var recipes = await recipeService.GetAllRecipesAsync();
 		return Ok(recipes);
 	}
 
 	[HttpGet("{id:guid}")]
-	public async Task<IActionResult> GetRecipeById(Guid id) {
+	public async Task<ActionResult<RecipeDto>> GetRecipeById(Guid id) {
 		var recipe = await recipeService.GetRecipeByIdAsync(id);
-		if (recipe == null) {
-			return NotFound();
-		}
+		if (recipe == null) return NotFound();
 		return Ok(recipe);
 	}
 

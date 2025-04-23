@@ -35,6 +35,12 @@ public class RecipeAndIngredientRepository : IRecipeAndIngredientRepository {
 		return recipeAndIngredient;
 	}
 
+	public async Task<List<RecipeAndIngredient>> GetRecipeIngredientsByIngredientIdAsync(Guid ingredientId) {
+		return await dbContext.RecipeAndIngredients
+			.Where(x => x.IngredientId == ingredientId)
+			.ToListAsync();
+	}
+
 	public async Task DeleteAsync(Guid id) {
 		var entity = await dbContext.RecipeAndIngredients.FindAsync(id);
 		if (entity != null) {

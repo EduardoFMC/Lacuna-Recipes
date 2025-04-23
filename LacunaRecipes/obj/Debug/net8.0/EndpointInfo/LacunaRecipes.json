@@ -232,6 +232,27 @@
             "description": "OK"
           }
         }
+      },
+      "delete": {
+        "tags": [
+          "RecipeAndIngredients"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/api/recipes": {
@@ -241,7 +262,33 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecipeDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecipeDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecipeDto"
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -293,7 +340,24 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecipeDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecipeDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecipeDto"
+                }
+              }
+            }
           }
         }
       },
@@ -384,6 +448,28 @@
         },
         "additionalProperties": false
       },
+      "IngredientDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "quantity": {
+            "type": "string",
+            "nullable": true
+          },
+          "unit": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Recipe": {
         "required": [
           "preparationMethod",
@@ -402,6 +488,13 @@
           "preparationMethod": {
             "minLength": 1,
             "type": "string"
+          },
+          "recipeAndIngredients": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecipeAndIngredient"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -412,6 +505,10 @@
         ],
         "type": "object",
         "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
           "recipeId": {
             "type": "string",
             "format": "uuid"
@@ -429,6 +526,31 @@
           "quantity": {
             "minLength": 1,
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RecipeDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "preparationMethod": {
+            "type": "string",
+            "nullable": true
+          },
+          "ingredients": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IngredientDto"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false

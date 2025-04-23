@@ -13,13 +13,12 @@ namespace LacunaRecipes.Entities {
 		protected override void OnModelCreating(ModelBuilder modelBuilder) {
 			base.OnModelCreating(modelBuilder);
 
-			// Composite key for RecipeAndIngredient
 			modelBuilder.Entity<RecipeAndIngredient>()
-				.HasKey(ri => new { ri.RecipeId, ri.IngredientId });
+				.HasKey(ri => ri.Id);
 
 			modelBuilder.Entity<RecipeAndIngredient>()
 				.HasOne(ri => ri.Recipe)
-				.WithMany()
+				.WithMany(r => r.RecipeAndIngredients)
 				.HasForeignKey(ri => ri.RecipeId);
 
 			modelBuilder.Entity<RecipeAndIngredient>()

@@ -9,5 +9,7 @@ namespace LacunaRecipes.Entities {
 
 		[Required]
 		public string PreparationMethod { get; set; } = string.Empty;
+
+		public ICollection<RecipeAndIngredient> RecipeAndIngredients { get; set; } = new List<RecipeAndIngredient>();
 	}
 }

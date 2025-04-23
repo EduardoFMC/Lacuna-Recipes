@@ -1,4 +1,5 @@
-﻿using LacunaRecipes.Business;
+﻿using System.Text.Json.Serialization;
+using LacunaRecipes.Business;
 using LacunaRecipes.Business.Repositories;
 using LacunaRecipes.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -21,7 +22,10 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 	)
 );
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+	.AddJsonOptions(options => {
+		options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+	});
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

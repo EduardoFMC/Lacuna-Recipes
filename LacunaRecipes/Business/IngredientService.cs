@@ -41,6 +41,17 @@ public class IngredientService {
 		);
 	}
 
+	public async Task DeleteAllRecipeAndIngredientsAsync(Guid ingredientId) {
+		var recipeAndIngredients = await recipeAndIngredientRepository.GetRecipeIngredientsByIngredientIdAsync(ingredientId);
+		foreach (var recipeAndIngredient in recipeAndIngredients) {
+			await recipeAndIngredientRepository.DeleteAsync(recipeAndIngredient.Id);
+		}
+		var recipes = await recipeRepository.GetAllAsync();
+		foreach (var recipe in recipes) {
+			await recipeRepository.DeleteAsync(recipe.Id);
+		}
+	}
+
 	public async Task DeleteIngredientAsync(Guid id) {
 		await persistenceRepository.TransactionAsync(
 			() => ingredientRepository.DeleteAsync(id)

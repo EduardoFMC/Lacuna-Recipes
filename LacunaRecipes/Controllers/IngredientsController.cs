@@ -59,6 +59,8 @@ public class IngredientsController : ControllerBase {
 			return NotFound();
 		}
 
+		await ingredientService.DeleteAllRecipeAndIngredientsAsync(id);
+
 		await ingredientService.DeleteIngredientAsync(id);
 		return NoContent();
 	}

@@ -1,5 +1,6 @@
 ﻿using LacunaRecipes.Business.Repositories;
 using LacunaRecipes.Entities;
+using LacunaRecipes.Models;
 
 namespace LacunaRecipes.Business;
 
@@ -21,13 +22,11 @@ public class RecipeService {
 		this.persistenceRepository = persistenceRepository;
 	}
 
-	public async Task<List<Recipe>> GetAllRecipesAsync() {
-		return await recipeRepository.GetAllAsync();
-	}
+	public Task<List<RecipeDto>> GetAllRecipesAsync()
+		=> recipeRepository.GetAllAsync();
 
-	public async Task<Recipe?> GetRecipeByIdAsync(Guid id) {
-		return await recipeRepository.GetByIdAsync(id);
-	}
+	public Task<RecipeDto?> GetRecipeByIdAsync(Guid id)
+		=> recipeRepository.GetByIdAsync(id);
 
 	public async Task<Recipe> AddRecipeAsync(Recipe recipe) {
 		return await persistenceRepository.TransactionAsync(async () => {

@@ -1,4 +1,5 @@
 ﻿using LacunaRecipes.Entities;
+using LacunaRecipes.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace LacunaRecipes.Business.Repositories;
@@ -15,12 +16,43 @@ public class RecipeRepository : IRecipeRepository {
 		this.persistenceRepository = persistenceRepository;
 	}
 
-	public async Task<List<Recipe>> GetAllAsync() {
-		return await dbContext.Recipes.ToListAsync();
+	public async Task<List<RecipeDto>> GetAllAsync() {
+		return await dbContext.Recipes
+			.Include(r => r.RecipeAndIngredients)
+			  .ThenInclude(ri => ri.Ingredient)
+			.Select(r => new RecipeDto {
+				Id = r.Id,
+				Title = r.Title,
+				PreparationMethod = r.PreparationMethod,
+				Ingredients = r.RecipeAndIngredients
+					.Select(ri => new IngredientDto {
+						Id = ri.IngredientId,
+						Name = ri.Ingredient.Name,
+						Quantity = ri.Quantity,
+						Unit = ri.Ingredient.Unit
+					}).ToList()
+			})
+			.ToListAsync();
 	}
 
-	public async Task<Recipe?> GetByIdAsync(Guid id) {
-		return await dbContext.Recipes.FindAsync(id);
+	public async Task<RecipeDto?> GetByIdAsync(Guid id) {
+		return await dbContext.Recipes
+			.Where(r => r.Id == id)
+			.Include(r => r.RecipeAndIngredients)
+			  .ThenInclude(ri => ri.Ingredient)
+			.Select(r => new RecipeDto {
+				Id = r.Id,
+				Title = r.Title,
+				PreparationMethod = r.PreparationMethod,
+				Ingredients = r.RecipeAndIngredients
+					.Select(ri => new IngredientDto {
+						Id = ri.IngredientId,
+						Name = ri.Ingredient.Name,
+						Quantity = ri.Quantity,
+						Unit = ri.Ingredient.Unit
+					}).ToList()
+			})
+			.FirstOrDefaultAsync();
 	}
 
 	public async Task<Recipe> AddAsync(Recipe recipe) {

@@ -142,6 +142,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "LacunaRecipes.Controllers.RecipeAndIngredientsController",
+    "Method": "Delete",
+    "RelativePath": "api/recipe-and-ingredients/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LacunaRecipes.Controllers.RecipesController",
     "Method": "GetAllRecipes",
     "RelativePath": "api/recipes",
@@ -149,7 +165,17 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[LacunaRecipes.Models.RecipeDto, LacunaRecipes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "LacunaRecipes.Controllers.RecipesController",
@@ -181,7 +207,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "LacunaRecipes.Models.RecipeDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "LacunaRecipes.Controllers.RecipesController",
