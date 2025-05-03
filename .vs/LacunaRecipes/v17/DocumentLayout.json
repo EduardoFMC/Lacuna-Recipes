@@ -1,0 +1,143 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Lacuna\\LacunaRecipes\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BB0FB8-9447-4023-8ABC-72DA39C28F3C}|LacunaRecipes\\LacunaRecipes.csproj|c:\\lacuna\\lacunarecipes\\lacunarecipes\\controllers\\recipescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BB0FB8-9447-4023-8ABC-72DA39C28F3C}|LacunaRecipes\\LacunaRecipes.csproj|solutionrelative:lacunarecipes\\controllers\\recipescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BB0FB8-9447-4023-8ABC-72DA39C28F3C}|LacunaRecipes\\LacunaRecipes.csproj|c:\\lacuna\\lacunarecipes\\lacunarecipes\\business\\recipeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BB0FB8-9447-4023-8ABC-72DA39C28F3C}|LacunaRecipes\\LacunaRecipes.csproj|solutionrelative:lacunarecipes\\business\\recipeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BB0FB8-9447-4023-8ABC-72DA39C28F3C}|LacunaRecipes\\LacunaRecipes.csproj|c:\\lacuna\\lacunarecipes\\lacunarecipes\\business\\repositories\\reciperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BB0FB8-9447-4023-8ABC-72DA39C28F3C}|LacunaRecipes\\LacunaRecipes.csproj|solutionrelative:lacunarecipes\\business\\repositories\\reciperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BB0FB8-9447-4023-8ABC-72DA39C28F3C}|LacunaRecipes\\LacunaRecipes.csproj|c:\\lacuna\\lacunarecipes\\lacunarecipes\\business\\repositories\\ireciperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BB0FB8-9447-4023-8ABC-72DA39C28F3C}|LacunaRecipes\\LacunaRecipes.csproj|solutionrelative:lacunarecipes\\business\\repositories\\ireciperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BB0FB8-9447-4023-8ABC-72DA39C28F3C}|LacunaRecipes\\LacunaRecipes.csproj|c:\\lacuna\\lacunarecipes\\lacunarecipes\\entities\\models\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BB0FB8-9447-4023-8ABC-72DA39C28F3C}|LacunaRecipes\\LacunaRecipes.csproj|solutionrelative:lacunarecipes\\entities\\models\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 208,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:254354193:0:{71f361cc-493f-47c0-923f-f2570b6f8618}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RecipeRepository.cs",
+              "DocumentMoniker": "C:\\Lacuna\\LacunaRecipes\\LacunaRecipes\\Business\\Repositories\\RecipeRepository.cs",
+              "RelativeDocumentMoniker": "LacunaRecipes\\Business\\Repositories\\RecipeRepository.cs",
+              "ToolTip": "C:\\Lacuna\\LacunaRecipes\\LacunaRecipes\\Business\\Repositories\\RecipeRepository.cs",
+              "RelativeToolTip": "LacunaRecipes\\Business\\Repositories\\RecipeRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAiwBwAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T22:50:12.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IRecipeRepository.cs",
+              "DocumentMoniker": "C:\\Lacuna\\LacunaRecipes\\LacunaRecipes\\Business\\Repositories\\IRecipeRepository.cs",
+              "RelativeDocumentMoniker": "LacunaRecipes\\Business\\Repositories\\IRecipeRepository.cs",
+              "ToolTip": "C:\\Lacuna\\LacunaRecipes\\LacunaRecipes\\Business\\Repositories\\IRecipeRepository.cs",
+              "RelativeToolTip": "LacunaRecipes\\Business\\Repositories\\IRecipeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T22:49:28.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RecipeService.cs",
+              "DocumentMoniker": "C:\\Lacuna\\LacunaRecipes\\LacunaRecipes\\Business\\RecipeService.cs",
+              "RelativeDocumentMoniker": "LacunaRecipes\\Business\\RecipeService.cs",
+              "ToolTip": "C:\\Lacuna\\LacunaRecipes\\LacunaRecipes\\Business\\RecipeService.cs",
+              "RelativeToolTip": "LacunaRecipes\\Business\\RecipeService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAlwBkAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T22:49:25.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Models.cs",
+              "DocumentMoniker": "C:\\Lacuna\\LacunaRecipes\\LacunaRecipes\\Entities\\models\\Models.cs",
+              "RelativeDocumentMoniker": "LacunaRecipes\\Entities\\models\\Models.cs",
+              "ToolTip": "C:\\Lacuna\\LacunaRecipes\\LacunaRecipes\\Entities\\models\\Models.cs",
+              "RelativeToolTip": "LacunaRecipes\\Entities\\models\\Models.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T22:48:37.384Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RecipesController.cs",
+              "DocumentMoniker": "C:\\Lacuna\\LacunaRecipes\\LacunaRecipes\\Controllers\\RecipesController.cs",
+              "RelativeDocumentMoniker": "LacunaRecipes\\Controllers\\RecipesController.cs",
+              "ToolTip": "C:\\Lacuna\\LacunaRecipes\\LacunaRecipes\\Controllers\\RecipesController.cs",
+              "RelativeToolTip": "LacunaRecipes\\Controllers\\RecipesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T22:47:28.649Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 192,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{5a4e9529-b6a0-46b5-be4f-0f0b239bc0eb}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
