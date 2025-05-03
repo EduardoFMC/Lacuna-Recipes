@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "YaA3j+f54Z3mkN4q2HsEhihtbxNY5VmOzea+zqDt7bw=",
+  "Hash": "lFzDxlLUIMXJEyPSaE2e2WGvkQoE0cDOpZuCW5E7Zc0=",
   "Source": "LacunaRecipes",
   "BasePath": "_content/LacunaRecipes",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }

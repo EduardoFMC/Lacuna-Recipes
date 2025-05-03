@@ -5158,31 +5158,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Edu\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/home/edufmc/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Lacuna\\LacunaRecipes\\LacunaRecipes\\LacunaRecipes.csproj",
+      "projectUniqueName": "/mnt/wsl/docker-desktop-bind-mounts/Ubuntu/904dfc3495c21bb9ff4560eb6acce61433b486d53f3f7698edd3dc0841bd7f29/LacunaRecipes/LacunaRecipes.csproj",
       "projectName": "LacunaRecipes",
-      "projectPath": "C:\\Lacuna\\LacunaRecipes\\LacunaRecipes\\LacunaRecipes.csproj",
-      "packagesPath": "C:\\Users\\Edu\\.nuget\\packages\\",
-      "outputPath": "C:\\Lacuna\\LacunaRecipes\\LacunaRecipes\\obj\\",
+      "projectPath": "/mnt/wsl/docker-desktop-bind-mounts/Ubuntu/904dfc3495c21bb9ff4560eb6acce61433b486d53f3f7698edd3dc0841bd7f29/LacunaRecipes/LacunaRecipes.csproj",
+      "packagesPath": "/home/edufmc/.nuget/packages/",
+      "outputPath": "/mnt/wsl/docker-desktop-bind-mounts/Ubuntu/904dfc3495c21bb9ff4560eb6acce61433b486d53f3f7698edd3dc0841bd7f29/LacunaRecipes/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Edu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/edufmc/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -5195,13 +5188,7 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.200"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -5245,7 +5232,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.115/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
