@@ -1,0 +1,15 @@
+bin/
+obj/
+.vs/
+*.db
+*.mdf
+*.ldf
+Dockerfile
+docker-compose*
+.git
+.gitignore
+*.user
+*.suo
+.vscode/
+.env
+secrets.json

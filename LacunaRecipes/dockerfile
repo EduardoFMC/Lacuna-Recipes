@@ -1,10 +1,18 @@
-FROM mcr.microsoft.com/dotnet/sdk:8.0@sha256:8ab06772f296ed5f541350334f15d9e2ce84ad4b3ce70c90f2e43db2752c30f6 as builder
-
-
+# BUILD
+FROM mcr.microsoft.com/dotnet/sdk:8.0@sha256:8ab06772f296ed5f541350334f15d9e2ce84ad4b3ce70c90f2e43db2752c30f6 AS build
 WORKDIR /App
 
 COPY . ./
+RUN dotnet restore
+RUN dotnet publish -c Release -o /App/publish
 
-RUN dotnet publish -c Release -o out
+# RUNTIME 
+FROM mcr.microsoft.com/dotnet/aspnet:8.0@sha256:6159cf66274cf52730d7a0c7bb05cf0af94b79370176886ac58286ab6cbb7faf AS runtime
+WORKDIR /App
 
-ENTRYPOINT ["dotnet", "./out/LacunaRecipes.dll"]
+COPY --from=build /App/publish .
+
+ENV ASPNETCORE_URLS=http://+:80
+EXPOSE 80
+
+ENTRYPOINT ["dotnet", "LacunaRecipes.dll"]
