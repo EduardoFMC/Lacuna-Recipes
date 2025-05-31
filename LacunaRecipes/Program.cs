@@ -38,10 +38,10 @@ using (var scope = app.Services.CreateScope()) {
 }
 
 // Swagger only in development
-if (env.IsDevelopment()) {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+//if (env.IsDevelopment()) {
+app.UseSwagger();
+app.UseSwaggerUI();
+//}
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
