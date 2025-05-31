@@ -5,5 +5,5 @@ jobs:
   - job: Lint
     steps:
       - checkout: self
-        fetchDepth: 0
+        fetchDepth:
     
