@@ -25,5 +25,5 @@ jobs:
         working-directory: LacunaRecipes
 
       - name: Run linter (dotnet format)
-        run: dotnet format --verify-no-changes
+        run: dotnet format LacunaRecipes.sln --verify-no-changes
         working-directory: LacunaRecipes
