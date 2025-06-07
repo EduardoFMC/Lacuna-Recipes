@@ -1,23 +1,25 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace LacunaRecipes.Entities {
-	public class RecipeAndIngredient {
-		public Guid Id { get; set; } = Guid.NewGuid();
+namespace LacunaRecipes.Entities
+{
+    public class RecipeAndIngredient
+    {
+        public Guid Id { get; set; } = Guid.NewGuid();
 
-		[Key]
-		[Column(Order = 0)]
-		[ForeignKey("Recipe")]
-		public Guid RecipeId { get; set; }
-		public Recipe Recipe { get; set; }
+        [Key]
+        [Column(Order = 0)]
+        [ForeignKey("Recipe")]
+        public Guid RecipeId { get; set; }
+        public Recipe Recipe { get; set; }
 
-		[Key]
-		[Column(Order = 1)]
-		[ForeignKey("Document")]
-		public Guid IngredientId { get; set; }
-		public Ingredient Ingredient { get; set; }
+        [Key]
+        [Column(Order = 1)]
+        [ForeignKey("Document")]
+        public Guid IngredientId { get; set; }
+        public Ingredient Ingredient { get; set; }
 
-		[Required]
-		public string Quantity { get; set; }
-	}
+        [Required]
+        public string Quantity { get; set; }
+    }
 }
